@@ -20,7 +20,7 @@ for i in range(1, 4):
 # print targets
 
 
-# 获取代理类
+# Parse the proxy website and get proxies
 class ProxyGet(threading.Thread):
     def __init__(self, target):
         threading.Thread.__init__(self)
@@ -65,7 +65,7 @@ class ProxyGet(threading.Thread):
         self.get_proxy()
 
 
-# 检测代理类
+# check if the proxies are useful.
 class ProxyCheck(threading.Thread):
 
     def __init__(self, proxy_list):
